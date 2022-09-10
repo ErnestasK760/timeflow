@@ -1,0 +1,17 @@
+controllers:
+    resource: ../src/Controller/
+    type: annotation
+about:
+    path: /about
+    controller: App\Controller\AboutController::about
+
+home:
+    path: /
+    controller: App\Controller\HomeController::home
+
+register:
+    path: /signup
+    controller: App\Controller\RegistrationController::signup
+login:
+    path: /login
+    controller: App\Controller\LoginController::login
