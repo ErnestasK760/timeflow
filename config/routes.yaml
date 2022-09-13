@@ -15,3 +15,6 @@ register:
 login:
     path: /login
     controller: App\Controller\LoginController::login
+app_logout:
+    path: /logout
+    methods: GET
