@@ -16,8 +16,11 @@
             </div>
             <div class="login-form-field-wrapper">
                 <form action="{{ path('app_login') }}" method="post" class="login-form">
-                    <input class="username-input" type="text" id="username" name="_username" placeholder="Username"/>
-                    <input class="password-input" type="text" id="password" name="_password" placeholder="Password"/>
+                    <label for="username">Username</label>
+                    <input class="username-input" type="text" id="username" name="_username"/>
+                    <label for="password">Password</label>
+                    <input class="password-input" type="text" id="password" name="_password"/>
+                    <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
                     <input type="hidden" name="_target_path" value="/"/>
                     <button class="login-submit-button" type="submit">Sign in</button>
                 </form>

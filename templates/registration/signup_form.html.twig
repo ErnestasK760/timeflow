@@ -15,17 +15,14 @@
                 <span>Please sign up to continue</span>
             </div>
             <div class="signup-form-field-wrapper">
-{#                <form class="signup-form">#}
-                    {{ form_start(registrationForm) }}
+                    {{ form_start(registrationForm, { 'attr': {'class': 'signup-form'}}) }}
                     {{ form_row(registrationForm.username) }}
                     {{ form_row(registrationForm.plainPassword, {
                         label: 'Password'
                     }) }}
-{#                    <input class="username-input" type="text" id="username" name="username" placeholder="Username"/>#}
-{#                    <input class="password-input" type="text" id="password" name="password" placeholder="Password"/>#}
                     <button class="signup-submit-button" type="submit">Sign up</button>
                     {{ form_end(registrationForm) }}
-{#                </form>#}
+
                 <div class="signup-socials">
                     <p>Or sign up using social media!</p>
                     <svg xmlns="http://www.w3.org/2000/svg" height="64" width="64" viewBox="-204.79995 -341.33325 1774.9329 2047.9995">

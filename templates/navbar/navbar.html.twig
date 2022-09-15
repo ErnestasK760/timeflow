@@ -5,8 +5,13 @@
         </div>
         <ul class="navbar-rightmenu">
             <a class="about" href={{ path('about') }}>About</a>
+            {% if app.user %}
+            <a class="logout" href={{ path('app_logout') }}>Logout</a>
+            {% elseif not app.user %}
             <a class="login" href={{ path('login') }}>Login</a>
             <a class="get-started" href={{ path('signup') }}>Get started</a>
+            {% endif %}
         </ul>
+
     </div>
 </div>
